@@ -1,10 +1,11 @@
 <?php
 $config = array(
+	"config_name" => "DEV",
 	"db" => array(
 	"host" => "localhost", 
-	"user" => "istock", 
-	"password" => '1st0$2ck9304',  
-	"database" => "istock",
+	"user" => "", 
+	"password" => "",  
+	"database" => "",
 	"type" => "mysql", 
 	"error_reporting" => true
 	),
@@ -17,5 +18,4 @@ $config = array(
 		array("file"=>"app/libraries/validation.php","name"=>"validation"),
 		array("file"=>"app/libraries/paginator.php","name"=>"paginator")
 	)
-
 );

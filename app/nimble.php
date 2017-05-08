@@ -3,7 +3,7 @@
 class nimble
 {
 	
-
+	
 	protected $controller = array();
 	protected $method = array();
 	protected $route = null;
@@ -17,13 +17,14 @@ class nimble
 	public $segments = array();
 	public $now = null;
 	public $is_post = false;
+	public $environment = "dev";
 
 	function init()
 	{
-
-		include_once(dirname(__FILE__) .'/routing.php');
-		include_once(dirname(__FILE__) .'/config.php');
-
+		
+		include_once(dirname(__FILE__) ."/routing.php");
+		include_once(dirname(__FILE__) ."/$this->environment.config.php");
+		
 		$this->now = date('Y-m-d H:i:s');
 		
 		$uri = $this->uri();
